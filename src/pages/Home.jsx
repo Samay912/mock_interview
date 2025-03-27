@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
 import styles from "../css/LandingPage.module.css";
-import { MessageSquare, ArrowRight, CheckCircle, Users, Laptop, Clock, Mic, BarChart, Award } from 'lucide-react';
+import {
+  MessageSquare,
+  ArrowRight,
+  CheckCircle,
+  Users,
+  Laptop,
+  Clock,
+  Mic,
+  BarChart,
+  Award,
+} from "lucide-react";
 
 function Home() {
   return (
@@ -11,11 +21,11 @@ function Home() {
           <h1>InterviewPro</h1>
         </div>
         <div className={styles.navLinks}>
-          <Link to="/about">About</Link>
-          <Link to="/features">Features</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/signup" className={styles.signupBtn}>
-            Sign Up
+          <Link to="#">About</Link>
+          <Link to="#">Features</Link>
+          <Link to="#">Contact</Link>
+          <Link to="/login" className={styles.signupBtn}>
+            Login
           </Link>
         </div>
       </nav>
@@ -29,23 +39,23 @@ function Home() {
             feedback, and track your progress to land your dream job.
           </p>
           <div className={styles.heroCta}>
-            <Link to="/signup">
+            <Link to="/signup" className={styles.text_r}>
               <button className={styles.ctaButton}>
                 Get Started <ArrowRight className={styles.ctaIcon} />
               </button>
             </Link>
-            <Link to="/about" className={styles.secondaryLink}>
+            <Link to="#" className={styles.secondaryLink}>
               Learn More
             </Link>
           </div>
         </div>
-        <div className={styles.heroImage}>
-          <img 
-            src="/placeholder.svg?height=400&width=400" 
-            alt="Interview simulation" 
+        {/* <div className={styles.heroImage}>
+          <img
+            src="/placeholder.svg?height=400&width=400"
+            alt="Interview simulation"
             className={styles.mainImage}
           />
-        </div>
+        </div> */}
       </header>
 
       {/* How It Works Section */}
@@ -55,7 +65,9 @@ function Home() {
           <div className={styles.step}>
             <div className={styles.stepNumber}>1</div>
             <h3>Create Your Profile</h3>
-            <p>Tell us about your target role, experience level, and tech stack</p>
+            <p>
+              Tell us about your target role, experience level, and tech stack
+            </p>
           </div>
           <div className={styles.step}>
             <div className={styles.stepNumber}>2</div>
@@ -85,7 +97,8 @@ function Home() {
             </div>
             <h3>Voice-Based Interviews</h3>
             <p>
-              Practice speaking your answers out loud for a realistic interview experience
+              Practice speaking your answers out loud for a realistic interview
+              experience
             </p>
           </div>
           <div className={styles.feature}>
@@ -93,14 +106,18 @@ function Home() {
               <Users className={styles.featureIcon} />
             </div>
             <h3>Role-Specific Questions</h3>
-            <p>Get questions tailored to your exact job role and experience level</p>
+            <p>
+              Get questions tailored to your exact job role and experience level
+            </p>
           </div>
           <div className={styles.feature}>
             <div className={styles.featureIconWrapper}>
               <BarChart className={styles.featureIcon} />
             </div>
             <h3>Detailed Analytics</h3>
-            <p>Track your performance with comprehensive reports and insights</p>
+            <p>
+              Track your performance with comprehensive reports and insights
+            </p>
           </div>
           <div className={styles.feature}>
             <div className={styles.featureIconWrapper}>
@@ -113,16 +130,19 @@ function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className={styles.testimonials}>
+      {/* <section className={styles.testimonials}>
         <h2>Success Stories</h2>
         <div className={styles.testimonialList}>
           <div className={styles.testimonial}>
-            <p>"InterviewPro helped me prepare for my software engineering interview at Google. The AI feedback was spot on!"</p>
+            <p>
+              "InterviewPro helped me prepare for my software engineering
+              interview at Google. The AI feedback was spot on!"
+            </p>
             <div className={styles.testimonialAuthor}>
-              <img 
-                src="/placeholder.svg?height=50&width=50" 
-                alt="User avatar" 
-                className={styles.testimonialAvatar} 
+              <img
+                src="/placeholder.svg?height=50&width=50"
+                alt="User avatar"
+                className={styles.testimonialAvatar}
               />
               <div>
                 <h4>Sarah Johnson</h4>
@@ -131,12 +151,15 @@ function Home() {
             </div>
           </div>
           <div className={styles.testimonial}>
-            <p>"After practicing with InterviewPro for two weeks, I felt so much more confident. I got the job on my first try!"</p>
+            <p>
+              "After practicing with InterviewPro for two weeks, I felt so much
+              more confident. I got the job on my first try!"
+            </p>
             <div className={styles.testimonialAuthor}>
-              <img 
-                src="/placeholder.svg?height=50&width=50" 
-                alt="User avatar" 
-                className={styles.testimonialAvatar} 
+              <img
+                src="/placeholder.svg?height=50&width=50"
+                alt="User avatar"
+                className={styles.testimonialAvatar}
               />
               <div>
                 <h4>Michael Chen</h4>
@@ -145,13 +168,16 @@ function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className={styles.ctaSection}>
         <h2>Ready to ace your next interview?</h2>
-        <p>Join thousands of job seekers who have improved their interview skills with InterviewPro</p>
-        <Link to="/signup">
+        <p>
+          Join thousands of job seekers who have improved their interview skills
+          with InterviewPro
+        </p>
+        <Link to="/signup" className={styles.text_r}>
           <button className={styles.ctaButton}>
             Start Practicing Now <ArrowRight className={styles.ctaIcon} />
           </button>
@@ -187,7 +213,9 @@ function Home() {
           </div>
         </div>
         <div className={styles.footerBottom}>
-          <p>&copy; {new Date().getFullYear()} InterviewPro. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} InterviewPro. All rights reserved.
+          </p>
           <div className={styles.footerBottomLinks}>
             <Link to="/privacy">Privacy Policy</Link>
             <Link to="/terms">Terms of Service</Link>

@@ -11,10 +11,9 @@ import {
   CheckCircle,
 } from "lucide-react";
 
-function Signup() {
+function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
     password: "",
   });
@@ -38,10 +37,6 @@ function Signup() {
 
   const validateForm = () => {
     const newErrors = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
-    }
 
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
@@ -90,28 +85,12 @@ function Signup() {
             </div>
           </div>
 
-          <h2>Create your account</h2>
+          <h2>Login to your account</h2>
           <p className={styles.subtitle}>
             Start practicing for your dream job interviews
           </p>
 
           <form onSubmit={handleSubmit}>
-            <div className={styles.formGroup}>
-              <label htmlFor="name">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Enter your full name"
-                className={errors.name ? styles.inputError : ""}
-              />
-              {errors.name && (
-                <span className={styles.errorMessage}>{errors.name}</span>
-              )}
-            </div>
-
             <div className={styles.formGroup}>
               <label htmlFor="email">Email Address</label>
               <input
@@ -137,7 +116,7 @@ function Signup() {
                   name="password"
                   value={formData.password}
                   onChange={handleChange}
-                  placeholder="Create a password"
+                  placeholder="Enter your password"
                   className={errors.password ? styles.inputError : ""}
                 />
                 <button
@@ -154,7 +133,7 @@ function Signup() {
             </div>
 
             <button type="submit" className={styles.submitButton}>
-              Create Account
+              Login
             </button>
           </form>
 
@@ -163,7 +142,7 @@ function Signup() {
           </div>
 
           <p className={styles.loginLink}>
-            Already have an account? <Link to="/login">Log in</Link>
+            Don't have an account yet? <Link to="/signup">Signup</Link>
           </p>
         </div>
 
@@ -195,4 +174,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Login;
