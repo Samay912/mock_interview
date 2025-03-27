@@ -1,0 +1,89 @@
+.container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1e1e2f;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navLinks a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #1e1e2f, #3a3a5a);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.ctaButton {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.text_r {
+  text-decoration: none;
+}
+
+.features {
+  padding: 4rem 2rem;
+}
+
+.featureList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.feature svg {
+  color: #ff6b6b;
+  height: 40px;
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #1e1e2f;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 3rem;
+}
