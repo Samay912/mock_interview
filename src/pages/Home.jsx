@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
-import styles from "../css/LandingPage.module.css";
-import { MessageSquare, ArrowRight, CheckCircle, Users, Laptop, Clock, Mic, BarChart, Award } from 'lucide-react';
+import { Link } from "react-router-dom"
+import styles from "../css/LandingPage.module.css"
+import { MessageSquare, ArrowRight, Users, Mic, BarChart, Award } from "lucide-react"
+import VapiConversation from "./VapiConversation"
 
 function Home() {
   return (
@@ -25,8 +26,8 @@ function Home() {
         <div className={styles.heroContent}>
           <h1>Ace Your Next Interview with AI</h1>
           <p>
-            Practice with personalized mock interviews, receive real-time
-            feedback, and track your progress to land your dream job.
+            Practice with personalized mock interviews, receive real-time feedback, and track your progress to land your
+            dream job.
           </p>
           <div className={styles.heroCta}>
             <Link to="/signup">
@@ -40,13 +41,18 @@ function Home() {
           </div>
         </div>
         <div className={styles.heroImage}>
-          <img 
-            src="/placeholder.svg?height=400&width=400" 
-            alt="Interview simulation" 
-            className={styles.mainImage}
-          />
+          <img src="/placeholder.svg?height=400&width=400" alt="Interview simulation" className={styles.mainImage} />
         </div>
       </header>
+
+      {/* Demo Section */}
+      <section className={styles.demoSection}>
+        <h2>Try Our Interview Assistant</h2>
+        <p className={styles.demoDescription}>
+          Experience how our AI-powered interview assistant works. Start an interview and practice your skills!
+        </p>
+        <VapiConversation />
+      </section>
 
       {/* How It Works Section */}
       <section className={styles.howItWorks}>
@@ -84,9 +90,7 @@ function Home() {
               <Mic className={styles.featureIcon} />
             </div>
             <h3>Voice-Based Interviews</h3>
-            <p>
-              Practice speaking your answers out loud for a realistic interview experience
-            </p>
+            <p>Practice speaking your answers out loud for a realistic interview experience</p>
           </div>
           <div className={styles.feature}>
             <div className={styles.featureIconWrapper}>
@@ -117,13 +121,12 @@ function Home() {
         <h2>Success Stories</h2>
         <div className={styles.testimonialList}>
           <div className={styles.testimonial}>
-            <p>"InterviewPro helped me prepare for my software engineering interview at Google. The AI feedback was spot on!"</p>
+            <p>
+              "InterviewPro helped me prepare for my software engineering interview at Google. The AI feedback was spot
+              on!"
+            </p>
             <div className={styles.testimonialAuthor}>
-              <img 
-                src="/placeholder.svg?height=50&width=50" 
-                alt="User avatar" 
-                className={styles.testimonialAvatar} 
-              />
+              <img src="/placeholder.svg?height=50&width=50" alt="User avatar" className={styles.testimonialAvatar} />
               <div>
                 <h4>Sarah Johnson</h4>
                 <p>Software Engineer at Google</p>
@@ -131,13 +134,12 @@ function Home() {
             </div>
           </div>
           <div className={styles.testimonial}>
-            <p>"After practicing with InterviewPro for two weeks, I felt so much more confident. I got the job on my first try!"</p>
+            <p>
+              "After practicing with InterviewPro for two weeks, I felt so much more confident. I got the job on my
+              first try!"
+            </p>
             <div className={styles.testimonialAuthor}>
-              <img 
-                src="/placeholder.svg?height=50&width=50" 
-                alt="User avatar" 
-                className={styles.testimonialAvatar} 
-              />
+              <img src="/placeholder.svg?height=50&width=50" alt="User avatar" className={styles.testimonialAvatar} />
               <div>
                 <h4>Michael Chen</h4>
                 <p>Data Scientist at Amazon</p>
@@ -195,7 +197,8 @@ function Home() {
         </div>
       </footer>
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home
+
