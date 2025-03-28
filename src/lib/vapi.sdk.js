@@ -5,4 +5,3 @@ import Vapi from "@vapi-ai/web"
 
 
 export const vapi = new Vapi("36068a84-4808-4fd7-b4eb-415057ec6708")
-

@@ -1,15 +1,11 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import styles from "../css/VapiConversation.module.css"
+import styles from "../css/CreateVapiConversation.module.css"
 import { Mic, MicOff, Loader, Volume2, VolumeX } from "lucide-react"
 import { vapi } from "../lib/vapi.sdk" 
 
-
-// Initialize Vapi with the public token
-// export const vapi = new Vapi(process.env.NEXT_PUBLIC_VAPI_WEB_TOKEN)
-
-const VapiConversation = () => {
+const CreateVapiConversation = () => {
   const [callStatus, setCallStatus] = useState("INACTIVE") // INACTIVE, CONNECTING, ACTIVE, FINISHED
   const [messages, setMessages] = useState([])
   const [isSpeaking, setIsSpeaking] = useState(false)
@@ -88,7 +84,6 @@ const VapiConversation = () => {
       setCallStatus("CONNECTING")
 
       // Start the call with the workflow ID
-      // You can pass additional variables to the workflow if needed
       await vapi.start("a6b80a87-0844-478c-97d8-37af0ad6c784", {
         variableValues: {
           username: "User",
@@ -217,7 +212,6 @@ const VapiConversation = () => {
       {/* Action Buttons */}
       <div className={styles.controls}>
         {renderActionButton()}
-
         {callStatus === "ACTIVE" && (
           <div className={styles.speakingIndicator}>
             {isSpeaking ? "Interviewer is speaking..." : "Your turn to speak"}
@@ -240,5 +234,4 @@ const VapiConversation = () => {
   )
 }
 
-export default VapiConversation
-
+export default CreateVapiConversation
